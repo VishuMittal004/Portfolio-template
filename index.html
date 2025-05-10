@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Vipanshu Mittal's Portfolio - Developer, Designer, Singer and Editor">
+    <meta name="theme-color" content="#6b62f6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="index.css">
+    <title>Vipanshu's Portfolio</title>
+    <style>
+        /* ... (rest of the styles remain the same) */
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div id="particles-js"></div>
+        <canvas id="mouse-trail"></canvas>
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+        <video autoplay muted loop id="background-video">
+            <source src="portfolio vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <img src="V.png" alt="Logo" style="height: 50px; width: auto;">
+            </div>
+            <div class="nav-menu">
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section>
+        <div class="main-container">
+            <div class="image" data-tilt data-tilt-max="20" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="v5.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Vipanshu Mittal</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Hello, I am Vipanshu, a passionate developer, designer, singer and editor with a deep interest in computer science, coding, and AI-related fields.</p>
+                <div class="social-links">
+                    <a href="https://github.com/vishumittal04" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_vipanshu_mittal/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vipanshu-mittal-a65973334/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/VishuMitta29340" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Buttons Section -->
+    <div class="extra-buttons">
+        <a href="skills.html">
+            <button class="btn-style">Skills</button>
+        </a>
+        <a href="projects.html">
+            <button class="btn-style">Projects</button>
+        </a>
+        <a href="graphic.html">
+            <button class="btn-style">Designs</button>
+        </a>
+        <a href="wall.html">
+            <button class="btn-style">Wallpapers</button>
+        </a>
+        <a href="edits.html">
+            <button class="btn-style">Edits</button>
+        </a>
+        <a href="achieve.html">
+            <button class="btn-style">Achievements</button>
+        </a>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p>
+                Hi, I am Vipanshu, a passionate developer, designer, singer and video editor with a strong background in computer science. I specialize in full-stack development, AI and machine learning and I enjoy exploring innovations in natural language processing and computer vision. As a graphic designer, I blend creativity with technology to deliver impactful visuals. I’m always seeking new challenges, whether it's coding projects, designing interfaces, or creating AI-driven solutions, all with a focus on improving user experience and efficiency. My work is guided by a desire to integrate my technical skills with my creative side for innovative outcomes.
+            </p>
+            <!-- Integrated 'Let Us Connect' -->
+            <div class="connect-container">
+                <div class="connect-image">
+                    <img src="email.png" alt="Connect Image"> <!-- Replace with your image -->
+                </div>
+                <div class="connect-content">
+                    <h3>Let Us Connect</h3>
+                    <p>If you'd like to collaborate or simply chat, feel free to reach out via email.</p>
+                </div>
+            </div>
+            <a href="mailto:vishumittal1975@gmail.com" class="email-button">Connect</a> 
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+
+      // Show the buttons when scrolling down
+      const extraButtons = document.querySelector('.extra-buttons');
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+              extraButtons.classList.add('show-buttons');
+          } else {
+              extraButtons.classList.remove('show-buttons');
+          }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
