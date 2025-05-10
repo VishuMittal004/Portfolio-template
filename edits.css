@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    position: relative;
+}
+
+/* Background Video Styling */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Skills Section */
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.skills-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6b62f6;
+    text-shadow: 0 0 10px #6b62f6;
+}
+
+/* Video Container Styling */
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+/* Video Item Styling (Hover Animation) */
+.video-item {
+    position: relative;
+    width: 400px;
+    height: 225px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+/* Hover effect: scaling and shadow */
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #6b62f6;
+}
+
+.video-item.selected {
+    border: 4px solid #6b62f6;
+    transform: scale(1.05);
+}
+
+/* Video styling */
+.reel-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollbar Styling */
+.video-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.video-container::-webkit-scrollbar-thumb {
+    background: #6b62f6;
+    border-radius: 5px;
+}
+
+.video-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

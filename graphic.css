@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    position: relative;
+}
+
+/* Background Video Styling */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Image Gallery Section */
+#image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+
+.gallery-container {
+    background-color: rgba(14, 14, 14, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    color: white;
+    text-align: center;
+}
+
+.gallery-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6b62f6;
+    text-shadow: 0 0 10px #6b62f6;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-row img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Scrollbar Styling */
+.image-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-row::-webkit-scrollbar-thumb {
+    background: #6b62f6;
+    border-radius: 5px;
+}
+
+.image-row::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-container {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .image-row img {
+        width: 150px;
+    }
+}
